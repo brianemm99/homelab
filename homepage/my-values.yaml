@@ -1,0 +1,40 @@
+config:
+  settings:
+    title: My Homelab
+    theme: dark
+
+  services:
+    - Monitoring:
+        - Grafana:
+            href: http://172.18.0.2:3000
+            description: Metrics dashboards
+            icon: grafana.png
+            namespace: monitoring
+    - Mealie:
+        - Mealie:
+            href: http://172.18.0.2:9000
+            description: Recipe manager
+            icon: mealie.png
+            namespace: mealie
+
+  bookmarks:
+    - Docs:
+        - Kubernetes:
+            - abbr: K8S
+              href: https://kubernetes.io/docs/home/
+        - Arch:
+            - abbr: Arch
+              href: https://wiki.archlinux.org/title/Main_page
+    - Accounts:
+        - GitHub:
+            - abbr: GitHub
+              href: https://github.com/brianemm99
+
+  widgets:
+    - resources:
+        cpu: true
+        memory: true
+
+env:
+  - name: HOMEPAGE_ALLOWED_HOSTS
+    value: 172.18.0.2:3001
